@@ -20,13 +20,17 @@ import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters;
 import com.anderson.minhasfinancas.model.enums.StatusLancamento;
 import com.anderson.minhasfinancas.model.enums.TipoLancamento;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "lancamento", schema = "financas")
 @Builder
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Lancamento {
 
 	@Id
@@ -48,7 +52,7 @@ public class Lancamento {
 	private Usuario usuario;
 	
 	@Column(name = "valor")
-	private BigDecimal Valor;
+	private BigDecimal valor;
 	
 	@Column(name = "data_cadastro")
 	@Convert(converter = Jsr310JpaConverters.LocalDateConverter.class)
