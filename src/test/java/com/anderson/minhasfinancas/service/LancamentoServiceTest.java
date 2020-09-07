@@ -21,7 +21,6 @@ import com.anderson.minhasfinancas.model.repository.LancamentoRepository;
 import com.anderson.minhasfinancas.model.repository.LancamentoRepositoryTest;
 import com.anderson.minhasfinancas.service.impl.LancamentoServiceImpl;
 
-
 @RunWith(SpringRunner.class)
 @ActiveProfiles("teste")
 public class LancamentoServiceTest {
